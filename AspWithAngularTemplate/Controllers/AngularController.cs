@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace AspWithAngularTemplate.Controllers
 {
+    [Authorize]
     public class AngularController : Controller
     {
         // GET: Angular

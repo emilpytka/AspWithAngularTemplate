@@ -10,27 +10,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var values_service_1 = require('./values.service');
-var AboutComponent = (function () {
-    function AboutComponent(valuesService) {
-        this.valuesService = valuesService;
-        this.firstName = "John";
-        this.lastName = "Snow";
-        this.initializeArray();
+var http_1 = require('@angular/http');
+require('rxjs/add/operator/toPromise');
+var ValuesService = (function () {
+    function ValuesService(http) {
+        this.http = http;
     }
-    AboutComponent.prototype.initializeArray = function () {
+    ValuesService.prototype.get = function () {
         var that = this;
-        this.valuesService.get()
-            .then(function (result) { return that.values = result; });
+        //this.http.get("/api/values")
+        //    .toPromise()
+        //    .then(response => that.values = response.json());
+        return ["value1"];
     };
-    AboutComponent = __decorate([
-        core_1.Component({
-            selector: 'my-about',
-            templateUrl: 'app/about.component.html',
-        }), 
-        __metadata('design:paramtypes', [values_service_1.ValuesService])
-    ], AboutComponent);
-    return AboutComponent;
+    ValuesService = __decorate([
+        core_1.Injectable(), 
+        __metadata('design:paramtypes', [http_1.Http])
+    ], ValuesService);
+    return ValuesService;
 }());
-exports.AboutComponent = AboutComponent;
-//# sourceMappingURL=about.component.js.map
+exports.ValuesService = ValuesService;
+//# sourceMappingURL=valuesService.js.map

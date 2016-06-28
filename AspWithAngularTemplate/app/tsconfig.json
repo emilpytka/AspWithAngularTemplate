@@ -13,7 +13,9 @@
     "app.component.ts",
     "about.component.ts",
     "home.component.ts",
-    "main.ts"
+    "main.ts",
+    "values.service.ts",
+    "in-memory-data.service.ts"
   ], 
   "compileOnSave": true
 }

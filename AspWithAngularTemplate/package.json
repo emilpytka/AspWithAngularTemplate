@@ -2,7 +2,9 @@
   "name": "AspWithAngularTemplate",
   "version": "1.0.0",
   "author": "us3r <emilpytka@gmail.com>",
-  "scripts": { },
+  "scripts": {
+    "typings": "typings"
+  },
   "license": "ISC",
   "dependencies": {
     "@angular/common": "2.0.0-rc.2",
