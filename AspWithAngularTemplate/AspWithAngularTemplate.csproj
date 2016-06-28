@@ -274,7 +274,6 @@
   <ItemGroup>
     <TypeScriptCompile Include="app\about.component.ts" />
     <TypeScriptCompile Include="app\app.component.ts" />
-    <TypeScriptCompile Include="app\in-memory-data.service.ts" />
     <TypeScriptCompile Include="app\main.ts" />
     <TypeScriptCompile Include="app\home.component.ts" />
     <TypeScriptCompile Include="app\values.service.ts" />
